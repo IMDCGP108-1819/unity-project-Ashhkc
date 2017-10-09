@@ -14,21 +14,6 @@ private:
 	restaurantPosition pos;
 	IBaseState* currentState;
 
-	// take order
-	/*bool readyToOrder;
-	bool orderTaken;
-
-	// tell kitchen
-	bool processingOrder;
-	bool orderProcessed;
-
-	// deliver food
-	int tableNumber;
-	bool foodReady;
-	bool foodDelivered;*/
-
-	// clear table
-
 	bool isCustomerPresent;
 	//bool isFoodCooked;
 
@@ -43,6 +28,22 @@ public:
 
 	const bool IsCustomerPresent() { return isCustomerPresent; }
 	//const bool IsFoodCooked() { return isFoodCooked; }
+
+
+	// take order
+	/*bool readyToOrder;
+	bool orderTaken;
+
+	// tell kitchen
+	bool processingOrder;
+	bool orderProcessed;
+
+	// deliver food
+	int tableNumber;
+	bool foodReady;
+	bool foodDelivered;*/
+
+	// clear table
 	
 };
 

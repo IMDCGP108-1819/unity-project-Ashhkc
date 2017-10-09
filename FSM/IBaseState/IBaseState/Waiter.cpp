@@ -17,12 +17,12 @@ void Waiter::Update()
 {
 	if (!isCustomerPresent)
 	{
-		sleep_for(2s);
+		//sleep_for(2s);
 		isCustomerPresent = true;
 	}
 	else if (isFoodCooked)
 	{
-		sleep_for(10s);
+		//sleep_for(10s);
 		isFoodCooked = true;
 	}
 	

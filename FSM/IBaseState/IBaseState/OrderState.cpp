@@ -14,6 +14,7 @@ OrderState::~OrderState()
 void OrderState::Enter(Waiter * wait)
 {
 	std::cout << "Hi, may I take your order?" << std::endl;
+	//sleep_for(3s);
 }
 
 void OrderState::Execute(Waiter * wait)
@@ -24,6 +25,6 @@ void OrderState::Execute(Waiter * wait)
 
 void OrderState::Exit(Waiter * wait)
 {
-	std::cout << "I'll just get that for you...";
+	std::cout << "I'll just get that for you... (->TellKitchenState)" << std::endl;
 }
 

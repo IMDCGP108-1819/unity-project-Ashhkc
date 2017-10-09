@@ -1,5 +1,6 @@
 #pragma once
 #include "IBaseState.h"
+
 class IdleState :
 	public IBaseState
 
@@ -13,6 +14,5 @@ public:
 	void Enter(Waiter* wait);
 	void Execute(Waiter* wait);
 	void Exit(Waiter* wait);
-
 };
 

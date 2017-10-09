@@ -13,7 +13,7 @@ KitchenState::~KitchenState()
 
 void KitchenState::Enter(Waiter * wait)
 {
-	std::cout << "It's hot in the kitchen!" << std::endl;
+	std::cout << "Got a new order for you!" << std::endl;
 }
 
 void KitchenState::Execute(Waiter * wait)
@@ -23,6 +23,6 @@ void KitchenState::Execute(Waiter * wait)
 
 void KitchenState::Exit(Waiter * wait)
 {
-	std::cout << "Now to wait for the next command..." << std::endl;
+	std::cout << "Now to wait for the next command... (-> IdleState)" << std::endl;
 	wait->isFoodCooked = true;
 }
