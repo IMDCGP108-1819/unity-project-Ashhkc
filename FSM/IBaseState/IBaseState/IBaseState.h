@@ -1,7 +1,12 @@
+#pragma once
 // IBaseState.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+#include <iostream>
+#include <chrono>
+#include <thread>
+using namespace std::this_thread;
+using namespace std::chrono_literals;
 
 class Waiter;
 
@@ -11,9 +16,6 @@ private:
 
 public:
 	virtual ~IBaseState() {};
-
-	//Used to change state
-	virtual void Update() = 0;
 
 	//Enter, execute and exit functions
 	virtual void Enter(Waiter*) = 0;

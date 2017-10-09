@@ -1,20 +1,21 @@
 #pragma once
 
 #include "IBaseState.h"
-#include "RestaurantPosition.h"
 
-class IBaseState;
+enum restaurantPosition
+{
+	hungryTable, emptyTable, waitingTable, kitchen, waiting
+};
 
-class Waiter :
-	public IBaseState
-
+class Waiter
 {
 private: 
-	IBaseState* currentState;
+
 	restaurantPosition pos;
+	IBaseState* currentState;
 
 	// take order
-	bool readyToOrder;
+	/*bool readyToOrder;
 	bool orderTaken;
 
 	// tell kitchen
@@ -24,12 +25,24 @@ private:
 	// deliver food
 	int tableNumber;
 	bool foodReady;
-	bool foodDelivered;
+	bool foodDelivered;*/
 
 	// clear table
+
+	bool isCustomerPresent;
+	//bool isFoodCooked;
 
 public:
 	Waiter();
 	~Waiter();
+
+	bool isFoodCooked = false;
+
+	void Update();
+	void ChangeState(IBaseState* newState);
+
+	const bool IsCustomerPresent() { return isCustomerPresent; }
+	//const bool IsFoodCooked() { return isFoodCooked; }
+	
 };
 
