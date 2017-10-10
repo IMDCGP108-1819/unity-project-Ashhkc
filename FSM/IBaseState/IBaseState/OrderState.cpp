@@ -13,12 +13,13 @@ OrderState::~OrderState()
 
 void OrderState::Enter(Waiter * wait)
 {
-	std::cout << "Hi, may I take your order?" << std::endl;
+	std::cout << "A new customer! (->TakeOrderState)" << std::endl;
 	//sleep_for(3s);
 }
 
 void OrderState::Execute(Waiter * wait)
 {
+	std::cout << "Hi, may I take your order?" << std::endl;
 	wait->ChangeState(new KitchenState());
 
 }

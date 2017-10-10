@@ -17,17 +17,14 @@ void Waiter::Update()
 {
 	if (!isCustomerPresent)
 	{
-		//sleep_for(2s);
-		isCustomerPresent = true;
-	}
-	else if (isFoodCooked)
-	{
-		//sleep_for(10s);
-		isFoodCooked = true;
+		isCustomer = rand() % 20 + 1;
+		if(isCustomer <= 7)
+			isCustomerPresent = true;
 	}
 	
 
 	currentState->Execute(this);
+	isCustomerPresent = false;
 }
 
 void Waiter::ChangeState(IBaseState * newState)

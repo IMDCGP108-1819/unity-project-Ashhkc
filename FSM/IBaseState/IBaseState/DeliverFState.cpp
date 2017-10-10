@@ -1,4 +1,4 @@
-#include "stdafx.h"
+#include "Waiter.h"
 #include "DeliverFState.h"
 
 
@@ -14,6 +14,7 @@ DeliverFState::~DeliverFState()
 void DeliverFState::Enter(Waiter * wait)
 {
 	std::cout << "Food's ready" << std::endl;
+	wait->isFoodCooked = false;
 }
 
 void DeliverFState::Execute(Waiter * wait)

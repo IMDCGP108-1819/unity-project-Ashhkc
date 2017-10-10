@@ -1,5 +1,5 @@
-﻿  OrderState.cpp
-  KitchenState.cpp
+﻿  Waiter.cpp
+c:\users\henry crofts\documents\github\ai-portfolio-henrywilliam95\fsm\ibasestate\ibasestate\waiter.cpp(21): warning C4804: '<=': unsafe use of type 'bool' in operation
   IdleState.cpp
   Generating Code...
   IBaseState.vcxproj -> C:\Users\Henry Crofts\Documents\GitHub\ai-portfolio-HenryWilliam95\FSM\IBaseState\Debug\IBaseState.exe

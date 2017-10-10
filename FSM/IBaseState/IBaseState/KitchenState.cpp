@@ -14,6 +14,7 @@ KitchenState::~KitchenState()
 void KitchenState::Enter(Waiter * wait)
 {
 	std::cout << "Got a new order for you!" << std::endl;
+	wait->isCustomerPresent = false;
 }
 
 void KitchenState::Execute(Waiter * wait)

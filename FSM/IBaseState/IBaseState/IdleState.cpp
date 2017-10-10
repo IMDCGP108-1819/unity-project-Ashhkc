@@ -1,6 +1,7 @@
 #include "IdleState.h"
 #include "Waiter.h"
 #include "OrderState.h"
+#include "DeliverFState.h"
 
 
 IdleState::IdleState()
@@ -17,13 +18,20 @@ void IdleState::Enter(Waiter * wait)
 
 void IdleState::Execute(Waiter * wait)
 {
-	if (wait->IsCustomerPresent())
+	switch
+
+
+
+
+	if (wait->isCustomerPresent = true)
 	{
-		std::cout << "A new customer! (->TakeOrderState)" << std::endl;
 		wait->ChangeState(new OrderState());
 	}
-
-	//TODO condition to switch to deliverFood state
+	else if (wait->isFoodCooked = true)
+	{
+		std::cout << "Have I got here?";
+		wait->ChangeState(new DeliverFState());
+	}
 
 	//TODO condition to switch to clearTable state
 }

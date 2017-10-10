@@ -10,23 +10,23 @@ enum restaurantPosition
 class Waiter
 {
 private: 
-
 	restaurantPosition pos;
 	IBaseState* currentState;
 
-	bool isCustomerPresent;
-	//bool isFoodCooked;
+	bool isCustomer;
 
 public:
 	Waiter();
 	~Waiter();
 
-	bool isFoodCooked = false;
-
 	void Update();
 	void ChangeState(IBaseState* newState);
 
-	const bool IsCustomerPresent() { return isCustomerPresent; }
+	bool isCustomerPresent = false;
+	bool isFoodCooked = false;
+	bool isTableFinished = false;
+
+
 	//const bool IsFoodCooked() { return isFoodCooked; }
 
 
