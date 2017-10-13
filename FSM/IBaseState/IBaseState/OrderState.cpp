@@ -1,6 +1,7 @@
 #include "OrderState.h"
 #include "Waiter.h"
 #include "KitchenState.h"
+#include <windows.h>
 
 OrderState::OrderState()
 {
@@ -14,7 +15,7 @@ OrderState::~OrderState()
 void OrderState::Enter(Waiter * wait)
 {
 	std::cout << "A new customer! (->TakeOrderState)" << std::endl;
-	//sleep_for(3s);
+	Sleep(1000);
 }
 
 void OrderState::Execute(Waiter * wait)

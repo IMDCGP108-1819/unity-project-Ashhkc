@@ -6,6 +6,7 @@ Waiter::Waiter()
 {
 	currentState = new IdleState();
 	currentState->Enter(this);
+	isCustomerPresent = true;
 }
 
 
@@ -17,12 +18,11 @@ void Waiter::Update()
 {
 	if (!isCustomerPresent)
 	{
-		isCustomer = rand() % 20 + 1;
+		isCustomer = ((10-9)+1) * rand() / (RAND_MAX + 1.0);
 		if(isCustomer <= 7)
 			isCustomerPresent = true;
 	}
 	
-
 	currentState->Execute(this);
 	isCustomerPresent = false;
 }

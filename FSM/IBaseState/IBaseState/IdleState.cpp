@@ -18,18 +18,19 @@ void IdleState::Enter(Waiter * wait)
 
 void IdleState::Execute(Waiter * wait)
 {
-	switch
+	
+	std::cout << "iscustomerpresent is " << wait->isCustomerPresent << std::endl;
 
-
-
-
-	if (wait->isCustomerPresent = true)
+	if (wait->isCustomerPresent == true)
 	{
+		Sleep(1000);
 		wait->ChangeState(new OrderState());
 	}
-	else if (wait->isFoodCooked = true)
+	
+	if (wait->isFoodCooked == true)
 	{
-		std::cout << "Have I got here?";
+		std::cout << "Have I got here?" << std::endl;
+		Sleep(1000);
 		wait->ChangeState(new DeliverFState());
 	}
 

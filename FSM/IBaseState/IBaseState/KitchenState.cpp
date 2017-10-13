@@ -19,6 +19,7 @@ void KitchenState::Enter(Waiter * wait)
 
 void KitchenState::Execute(Waiter * wait)
 {
+	Sleep(1000);
 	wait->ChangeState(new IdleState());
 }
 

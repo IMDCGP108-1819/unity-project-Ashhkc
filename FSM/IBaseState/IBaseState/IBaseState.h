@@ -5,6 +5,7 @@
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <windows.h>
 using namespace std::this_thread;
 using namespace std::chrono_literals;
 

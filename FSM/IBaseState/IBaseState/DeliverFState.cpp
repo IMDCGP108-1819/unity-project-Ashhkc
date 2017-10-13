@@ -1,5 +1,6 @@
 #include "Waiter.h"
 #include "DeliverFState.h"
+#include "IdleState.h"
 
 
 DeliverFState::DeliverFState()
@@ -20,6 +21,8 @@ void DeliverFState::Enter(Waiter * wait)
 void DeliverFState::Execute(Waiter * wait)
 {
 	std::cout << "Here is your food." << std::endl;
+	Sleep(1000);
+	wait->ChangeState(new IdleState());
 }
 
 void DeliverFState::Exit(Waiter * wait)
