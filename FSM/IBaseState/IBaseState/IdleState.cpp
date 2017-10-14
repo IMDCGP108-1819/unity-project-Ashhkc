@@ -2,7 +2,7 @@
 #include "Waiter.h"
 #include "OrderState.h"
 #include "DeliverFState.h"
-
+#include "ClearTable.h"
 
 IdleState::IdleState()
 {
@@ -18,27 +18,26 @@ void IdleState::Enter(Waiter * wait)
 
 void IdleState::Execute(Waiter * wait)
 {
-	
-	std::cout << "iscustomerpresent is " << wait->isCustomerPresent << std::endl;
-
 	if (wait->isCustomerPresent == true)
 	{
-		Sleep(1000);
+		Sleep(1000);  // make program sleep for readability
 		wait->ChangeState(new OrderState());
 	}
 	
 	if (wait->isFoodCooked == true)
 	{
-		std::cout << "Have I got here?" << std::endl;
-		Sleep(1000);
+		Sleep(1000);  // make program sleep for readability
 		wait->ChangeState(new DeliverFState());
 	}
 
-	//TODO condition to switch to clearTable state
+	if (wait->isTableFinished == true)
+	{
+		Sleep(1000);  // make program sleep for readability
+		wait->ChangeState(new ClearTable());
+	}
 }
 
 void IdleState::Exit(Waiter * wait)
 {
-	
 }
 

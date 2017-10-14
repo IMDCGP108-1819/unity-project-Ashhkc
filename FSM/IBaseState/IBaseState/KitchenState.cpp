@@ -2,6 +2,10 @@
 #include "IdleState.h"
 #include "Waiter.h"
 
+//////////////////////////////////////////////////////////////////
+//	Basic kitchen class, doesnt output anything to the console, //
+//	used to update boolean values behind the scenes.			//
+//////////////////////////////////////////////////////////////////
 
 KitchenState::KitchenState()
 {
@@ -13,18 +17,15 @@ KitchenState::~KitchenState()
 
 void KitchenState::Enter(Waiter * wait)
 {
-	std::cout << "Got a new order for you!" << std::endl;
 	wait->isCustomerPresent = false;
 }
 
 void KitchenState::Execute(Waiter * wait)
 {
-	Sleep(1000);
 	wait->ChangeState(new IdleState());
 }
 
 void KitchenState::Exit(Waiter * wait)
 {
-	std::cout << "Now to wait for the next command... (-> IdleState)" << std::endl;
 	wait->isFoodCooked = true;
 }

@@ -5,6 +5,11 @@ class DeliverFState :
 	public IBaseState
 
 {
+private:
+	int foodDelivered = 0;
+	int& foodReference = foodDelivered;
+
+
 public:
 	DeliverFState();
 	~DeliverFState();

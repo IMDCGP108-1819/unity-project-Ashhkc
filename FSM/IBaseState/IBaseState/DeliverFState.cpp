@@ -2,7 +2,6 @@
 #include "DeliverFState.h"
 #include "IdleState.h"
 
-
 DeliverFState::DeliverFState()
 {
 }
@@ -14,18 +13,21 @@ DeliverFState::~DeliverFState()
 
 void DeliverFState::Enter(Waiter * wait)
 {
-	std::cout << "Food's ready" << std::endl;
 	wait->isFoodCooked = false;
+	std::cout << "Here's your food...";
+	Sleep(1000);
 }
 
 void DeliverFState::Execute(Waiter * wait)
 {
-	std::cout << "Here is your food." << std::endl;
-	Sleep(1000);
 	wait->ChangeState(new IdleState());
+	Sleep(1000);
 }
 
 void DeliverFState::Exit(Waiter * wait)
 {
-	std::cout << "Now to wait for the next command..." << std::endl;
+	foodReference++;
+	wait->isTableFinished = true;
+	std::cout << " can I get you anything else? " << std::endl;
+	std::cout << "Food delivered to customer: " << foodReference << std::endl << std::endl;
 }

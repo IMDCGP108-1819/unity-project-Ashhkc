@@ -147,6 +147,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearTable.h" />
     <ClInclude Include="DeliverFState.h" />
     <ClInclude Include="IdleState.h" />
     <ClInclude Include="KitchenState.h" />
@@ -154,8 +155,8 @@
     <ClInclude Include="Waiter.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClearTable.cpp" />
     <ClCompile Include="DeliverFState.cpp" />
-    <ClCompile Include="IBaseState.cpp" />
     <ClCompile Include="IBaseState.h" />
     <ClCompile Include="IdleState.cpp" />
     <ClCompile Include="KitchenState.cpp" />

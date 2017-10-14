@@ -2,15 +2,17 @@
 
 #include "IBaseState.h"
 
-enum restaurantPosition
-{
-	hungryTable, emptyTable, waitingTable, kitchen, waiting
-};
+//enum restaurantPosition { hungryTable, emptyTable, waitingTable, kitchen, waiting };
+
+//enum WaitStates { IDLE, TAKE_ORDER, TELL_KITCHEN, DELIVER_FOOD, CLEAR_TABLE };
+
+//WaitStates* wStates;
+
 
 class Waiter
 {
 private: 
-	restaurantPosition pos;
+	//restaurantPosition pos;
 	IBaseState* currentState;
 
 	bool isCustomer;
@@ -24,26 +26,6 @@ public:
 
 	bool isCustomerPresent = false;
 	bool isFoodCooked = false;
-	bool isTableFinished = false;
-
-
-	//const bool IsFoodCooked() { return isFoodCooked; }
-
-
-	// take order
-	/*bool readyToOrder;
-	bool orderTaken;
-
-	// tell kitchen
-	bool processingOrder;
-	bool orderProcessed;
-
-	// deliver food
-	int tableNumber;
-	bool foodReady;
-	bool foodDelivered;*/
-
-	// clear table
-	
+	bool isTableFinished = false;	
 };
 

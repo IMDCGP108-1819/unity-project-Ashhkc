@@ -5,6 +5,10 @@ class OrderState :
 	public IBaseState
 
 {
+private:
+	int customerNumber = 0;
+	int& customerReference = customerNumber;
+
 public:
 	OrderState();
 	~OrderState();
