@@ -2,6 +2,8 @@
 #include "Waiter.h"
 #include "KitchenState.h"
 
+int OrderState::customerNumber = 0; // count how many customers are placing orders
+
 OrderState::OrderState()
 {
 	
@@ -14,7 +16,7 @@ OrderState::~OrderState()
 void OrderState::Enter(Waiter * wait)
 {
 	std::cout << "Hello, may I take your order?" << std::endl;
-	Sleep(2000);
+	Sleep(1000);
 }
 
 void OrderState::Execute(Waiter * wait)
@@ -24,9 +26,9 @@ void OrderState::Execute(Waiter * wait)
 
 void OrderState::Exit(Waiter * wait)
 {
-	customerReference++;
+	customerNumber++;
 	std::cout << "Is that everything?  Great, I'll just put that through for you!" << std::endl;
-	std::cout << "Customer number: " << customerReference << std::endl << std::endl;
+	std::cout << "Customer number: " << customerNumber << std::endl << std::endl;
 	Sleep(1000);
 }
 

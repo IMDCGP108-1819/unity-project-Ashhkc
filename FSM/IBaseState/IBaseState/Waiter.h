@@ -23,6 +23,7 @@ public:
 
 	void Update();
 	void ChangeState(IBaseState* newState);
+	void AddToList();
 
 	bool isCustomerPresent = false;
 	bool isFoodCooked = false;

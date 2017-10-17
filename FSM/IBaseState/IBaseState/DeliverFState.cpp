@@ -2,6 +2,8 @@
 #include "DeliverFState.h"
 #include "IdleState.h"
 
+int DeliverFState::foodDelivered = 0; // count which customer has recieved their food
+
 DeliverFState::DeliverFState()
 {
 }
@@ -26,8 +28,8 @@ void DeliverFState::Execute(Waiter * wait)
 
 void DeliverFState::Exit(Waiter * wait)
 {
-	foodReference++;
+	foodDelivered++;
 	wait->isTableFinished = true;
 	std::cout << " can I get you anything else? " << std::endl;
-	std::cout << "Food delivered to customer: " << foodReference << std::endl << std::endl;
+	std::cout << "Food delivered to customer: " << foodDelivered << std::endl << std::endl;
 }

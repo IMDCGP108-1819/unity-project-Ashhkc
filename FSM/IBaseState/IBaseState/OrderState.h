@@ -6,8 +6,7 @@ class OrderState :
 
 {
 private:
-	int customerNumber = 0;
-	int& customerReference = customerNumber;
+	static int customerNumber;
 
 public:
 	OrderState();

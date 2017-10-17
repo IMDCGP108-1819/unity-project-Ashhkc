@@ -5,8 +5,7 @@ class ClearTable :
 	public IBaseState
 {
 private:
-	int tableCount = 0;
-	int& tableClearedReference = tableCount;
+	static int tableCount;
 
 public:
 	ClearTable();

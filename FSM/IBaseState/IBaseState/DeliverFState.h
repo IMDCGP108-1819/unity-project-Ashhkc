@@ -6,8 +6,7 @@ class DeliverFState :
 
 {
 private:
-	int foodDelivered = 0;
-	int& foodReference = foodDelivered;
+	static int foodDelivered;
 
 
 public:

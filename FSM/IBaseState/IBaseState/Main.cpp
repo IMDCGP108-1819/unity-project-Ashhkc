@@ -9,7 +9,7 @@ int main()
 
 	while (true)
 	{
-		waiter->Update();
+		waiter->Update(); //Updates the FSM every loop through the while statement
 	}
 
 	return 0;

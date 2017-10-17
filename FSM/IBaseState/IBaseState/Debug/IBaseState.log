@@ -1,11 +1,7 @@
-﻿  IBaseState.h
+﻿  OrderState.cpp
+  ClearTable.cpp
   Generating Code...
   Skipping... (no relevant changes detected)
-  Waiter.cpp
-  OrderState.cpp
-  KitchenState.cpp
-  IdleState.cpp
-  DeliverFState.cpp
-  ClearTable.cpp
-  IBaseState.vcxproj -> C:\Users\Henry Crofts\Documents\GitHub\ai-portfolio-HenryWilliam95\FSM\IBaseState\Debug\IBaseState.exe
-  IBaseState.vcxproj -> C:\Users\Henry Crofts\Documents\GitHub\ai-portfolio-HenryWilliam95\FSM\IBaseState\Debug\IBaseState.pdb (Partial PDB)
+  IBaseState.h
+  IBaseState.vcxproj -> C:\Users\Administrator\Documents\GitHub\ai-portfolio-HenryWilliam95\FSM\IBaseState\Debug\IBaseState.exe
+  IBaseState.vcxproj -> C:\Users\Administrator\Documents\GitHub\ai-portfolio-HenryWilliam95\FSM\IBaseState\Debug\IBaseState.pdb (Partial PDB)

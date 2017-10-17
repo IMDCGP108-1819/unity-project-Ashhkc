@@ -1,6 +1,7 @@
 #include "Waiter.h"
 #include "IdleState.h"
 #include "OrderState.h"
+#include <list>
 
 //constructor for Waiter class
 Waiter::Waiter()
@@ -18,26 +19,6 @@ Waiter::~Waiter()
 // method called by main() in a while loop
 void Waiter::Update()
 {
-	// Attempt to use pointers in switch statement
-	/* 
-	switch (*wStates)
-	{
-	case IDLE:
-	new OrderState();
-		break;
-	case TAKE_ORDER:
-	new TellKitchen();
-		break;
-	case TELL_KITCHEN:
-	new IdleState();
-		break;
-	case DELIVER_FOOD:
-		break;
-	case CLEAR_TABLE:
-		break;
-	}*/
-
-
 // Using update to set customer to true at random intervals to keep the FSM looping round, while still accessing
 // other states when isCustomerPresent is false
 	if (!isCustomerPresent)
@@ -45,8 +26,6 @@ void Waiter::Update()
 		isCustomer = ((10-9)+1) * rand() / (RAND_MAX + 1.0);
 		if (isCustomer <= 7)
 			isCustomerPresent = true;
-			//*wStates = CUSTOMER_PRESENT;
-
 	}
 
 	currentState->Execute(this);
